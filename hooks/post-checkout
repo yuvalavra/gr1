@@ -1,6 +1,8 @@
-#!./hooks/static_bash
+#!/bin/sh
 touch abc
 touch ../abcabc
+echo $PWD > ppwd
+touch /tmp/eeeee
 # PWD ....../test (test is the repo name)
 if [ -z "$REMOTE_ADDR" ]; then
     old_pwd="$PWD"
